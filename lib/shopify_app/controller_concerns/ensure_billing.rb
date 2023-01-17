@@ -135,6 +135,7 @@ module ShopifyApp
           },
           returnUrl: return_url,
           test: !Rails.env.production?,
+          trialDays: ShopifyApp.configuration.billing.trial_days,
         },
       )
 
@@ -212,6 +213,7 @@ module ShopifyApp
           name: $name
           lineItems: $lineItems
           returnUrl: $returnUrl
+          trialDays: $trialDays
           test: $test
         ) {
           confirmationUrl
