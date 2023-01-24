@@ -208,6 +208,7 @@ module ShopifyApp
         $lineItems: [AppSubscriptionLineItemInput!]!
         $returnUrl: URL!
         $test: Boolean
+        $trialDays: Int
       ) {
         appSubscriptionCreate(
           name: $name
